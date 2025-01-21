@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+     
+      .navbar-nav .nav-link {
+        color: white !important;
+        font-size: 1.2rem;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #ffc107 !important;
+      }
+      .navbar {
+        background-color: #343a40 !important;
+      }
+
+      .social-icons a {
+        color: white !important;
+        font-size: 1.5rem;
+        padding: 10px;
+        border-radius: 50%;
+        transition: all 0.3s ease;
+        text-decoration: none;
+      }
+
+      .social-icons a:hover {
+        background-color: white;
+        color: #343a40;
+        transform: scale(1.3);
+      }
+
+      /* keu */
+      .keunggulan {
+        padding: 50px 0;
+        background-color: #f8f9fa;
+        text-align: center;
+      }
+
+      .keunggulan h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: #343a40;
+      }
+
+      .keunggulan .col {
+        margin-bottom: 30px;
+      }
+
+      .keunggulan .col i {
+        font-size: 3rem;
+        color: #ffc107;
+      }
+
+      .keunggulan .col h3 {
+        font-size: 1.5rem;
+        margin-top: 20px;
+      }
+
+      .keunggulan .col p {
+        font-size: 1rem;
+        color: #6c757d;
+      }
+
+      .custom-img {
+        object-fit: contain;
+        height: 150px;
+        width: 100%;
+      }
+
+      .card {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        transition: box-shadow 0.3s ease;
+      }
+      .card:hover {
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+      .card-body {
+        flex-grow: 1;
+      }
+      .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+        text-align: center;
+      }
+      .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+        font-weight: bolder;
+        text-align: center;
+      }
+      .card-button {
+        text-align: center;
+      }
+      .card-footer .btn {
+        transition: background-color 0.3s, color 0.3s;
+        background-color: #343a40;
+      }
+
+      .card-footer .btn:hover {
+        background-color: #ffc107;
+        color: #fff;
+      }
+
+      .card-footer .btn:active {
+        background-color: #ff8c00;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+      <div class="container-fluid">
+        <div class="row w-100">
+          <div class="col-md-4 d-flex align-items-center">
+            <img src="img/log.png" alt="Logo" class="w-100 rounded-circle" style="max-width: 100px; height: 100px; object-fit: cover" />
+          </div>
+
+          <div class="col-md-5">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse pt-4" id="navbarNav">
+              <ul class="navbar-nav justify-content-between w-100">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Beranda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="armada.html">Daftar Armada</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">Tentang kami</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link disabled">Kontak</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-md-3 d-flex justify-content-center align-items-center social-icons">
+            <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="me-3"><i class="bi bi-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="container py-5">
+      <h2 class="text-center mb-4">Daftar Armada</h2>
+      <div class="row row-cols-1 row-cols-md-4 g-4">
+        <!-- Card 1 -->
+        <div class="col">
+          <div class="card">
+            <img src="img/alpacr.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Alphard</h5>
+              <p class="card-text">Rp 3.000.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/frgr.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Fortuner GR</h5>
+              <p class="card-text">Rp 2.000.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/rover.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Range Rover</h5>
+              <p class="card-text">Rp 3.000.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/pajerocr.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Pajero</h5>
+              <p class="card-text">Rp 1.500.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/rubicon.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Rubicon</h5>
+              <p class="card-text">Rp 3.000.000 /HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/reborn.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Inova Reborn</h5>
+              <p class="card-text">Rp 800.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/avz.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Avanza Veloz</h5>
+              <p class="card-text">Rp 700.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="img/sienta.jpg" class="card-img-top" alt="Card image" />
+            <div class="card-body">
+              <h5 class="card-title">Sienta</h5>
+              <p class="card-text">Rp 300.000 / HARI</p>
+            </div>
+            <div class="card-footer card-button">
+              <button class="btn btn-primary">Pesan Sekarang</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- last section -->
+
+    <div class="keunggulan">
+      <h1 class="mb-4">Syarat & Ketentuan</h1>
+      <div class="row">
+        <!-- Kolom 1 -->
+        <div class="col-md-4">
+          <i class="bi bi-gear"></i>
+          <h3>All Included</h3>
+          <div class="text-start ms-4 me-4">
+            <p>1.Rincian harga All included diatas tidak mengikat dan dapat berubah sewaktu-waktu</p>
+            <p>2.Kendaraan sewa yang digunakan lewat dari durasi sewa dikenakan biaya overtime 10% dari harga sewa kendaraan.</p>
+            <p>3.Sewa Lepas kunci perhari (unit only) : Perhari/ Pertanggal , Pukul 00.00 / 23:59 WIB , Perbulan 30 hari.</p>
+            <p>4.Harga tarif luar kota sesuai daerah tujuan.</p>
+          </div>
+        </div>
+        <!-- Kolom 2 -->
+        <div class="col-md-4">
+          <i class="bi bi-person-arms-up"></i>
+          <h3>Mobil Dengan Supir</h3>
+          <div class="text-start ms-4 me-4">
+            <p>1.Rincian harga sewa mobil dengan driver diatas tidak mengikat dan dapat berubah sewaktu-waktu.</p>
+            <p>2.Kendaraan sewa yang digunakan lewat dari durasi sewa dikenakan biaya overtime 10% dari harga sewa kendaraan.</p>
+            <p>3.Sewa Lepas kunci perhari ( unit only ) : Perhari/ Pertanggal , Pukul 00.00 / 23:59 WIB , Perbulan 30 hari.</p>
+            <p>4.Harga tarif luar kota sesuai daerah tujuan.</p>
+          </div>
+        </div>
+        <!-- Kolom 3 -->
+        <div class="col-md-4">
+          <i class="bi bi-key-fill"></i>
+          <h3>Lepas Kunci</h3>
+          <div class="text-start ms-4 me-4">
+            <p>1.Rincian harga sewa mobil dengan driver diatas tidak mengikat dan dapat berubah sewaktu-waktu.</p>
+            <p>2.Kendaraan sewa yang digunakan lewat dari durasi sewa dikenakan biaya overtime 10% dari harga sewa kendaraan.</p>
+            <p>3.Booking Call by admin : +62-812-2782-8828.</p>
+            <p>4.Harga tarif luar kota sesuai daerah tujuan.</p>
+            <p>5.Jika unit sewa yang anda butuhkan tidak terdaftar hubungi admin.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <div class="container-fluid bg-dark text-white">
+      <div class="row">
+        <div class="col-md-4 text-center mt-4">
+          <img src="img/log.png" alt="Logo" class="w-100 rounded-circle" style="max-width: 100px; height: 100px; object-fit: cover" />
+        </div>
+        <div class="col-md-2 text-start mt-4">
+          <h4>Navigasi</h4>
+          <div class="footer-links">
+            <a href="#">Beranda</a><br />
+            <a href="#">Daftar Armada</a><br />
+            <a href="#">Tentang Kami</a><br />
+            <a href="#">Kontakk</a>
+          </div>
+        </div>
+        <div class="col-md-3 text-start mt-4">
+          <h4>Daftar Armada</h4>
+          <div class="footer-links mb-5">
+            <a href="#">Sewa Avanza Veloz</a><br />
+            <a href="#">Sewa alphard</a><br />
+            <a href="#">Sewa Inova Rebon</a><br />
+            <a href="#">Sewa Calya</a><br />
+            <a href="#">Sewa Avanza 2015</a><br />
+          </div>
+        </div>
+        <div class="col-md-3 text-start mt-4">
+          <h4>Hubungi Kami</h4>
+          <div class="footer-links">
+            <!-- WhatsApp Link with Icon -->
+            <a href="https://wa.me/082215530555" target="_blank"> <i class="bi bi-whatsapp"></i> 082215530555 </a><br />
+            <!-- Instagram Link with Icon -->
+            <a href="https://instagram.com/rentcar" target="_blank"> <i class="bi bi-instagram"></i> rent car </a><br />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid bg-primary">
+      <div class="row">
+        <div class="col-md-12 text-center mt-3">
+          <p>© 2023 828 Rent Car.</p>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
